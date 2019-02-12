@@ -36,13 +36,13 @@ int main(){
 		/* Check if button A is pressed;
 		 * turn off LED matrix if it is. */
 		int maske1 = 0x04000000;
-		maske1 = GPIO->IN & maske1;
+		maske1 = ~GPIO->IN & maske1;
 		if(maske1){
 			GPIO->OUTSET = (0b111 << 13);
 		}
 
 		int maske2 = 0x00020000;
-		maske2 = GPIO->IN & maske2;
+		maske2 = ~GPIO->IN & maske2;
 		if(maske2){
 			GPIO->OUTCLR = (0b111 << 13);
 		}
