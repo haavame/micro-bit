@@ -15,9 +15,10 @@ typedef struct {
 	volatile uint32_t PIN_CNF[32];
 } NRF_GPIO_REGS;
 
-int main(){
+int main() {
 	// Configure LED Matrix
-	for(int i = 4; i <= 15; i++){
+	for (int i = 4; i <= 15; i++) {
+
 		GPIO->DIRSET = (1 << i);
 		GPIO->OUTCLR = (1 << i);
 	}
