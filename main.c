@@ -16,6 +16,9 @@ typedef struct {
 } NRF_GPIO_REGS;
 
 int main() {
+
+	printf("Hello World!\n);
+
 	// Configure LED Matrix
 	for (int i = 4; i <= 15; i++) {
 
