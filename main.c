@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <stdio.h>
 
 #define GPIO ((NRF_GPIO_REGS*)0x50000000)
 
@@ -17,7 +18,9 @@ typedef struct {
 
 int main() {
 
-	printf("Hello World!\n);
+	printf("Hello World!\n");
+	printf("And Mars!\n");
+
 
 	// Configure LED Matrix
 	for (int i = 4; i <= 15; i++) {
